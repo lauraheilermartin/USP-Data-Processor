@@ -262,14 +262,25 @@ if project == "DDF919":
         # Add image with title and description
         
         with st.sidebar.container():
-            image = Image.open(r"C:\Users\HEILELA1\OneDrive - Novartis Pharma AG\Documents\Code\Project DDF919\Info\Nomenclature_DDF919.png")
-            st.sidebar.markdown("""<div style='font-size:18px; color:black; font-weight:bold;'> Nomenclature DDF</div>""", unsafe_allow_html=True)
-            st.sidebar.markdown("""<div style='text-align: justify; font-size:16px; color:black; font-weight:500; '>
-            This diagram presents the upstream workflow of the DDF co-cultivation project, detailing sequential stages from cell thawing to the N-1 phase. <br>
-                                It includes standardised nomenclature and hierarchical relationships.
-            </div>""", unsafe_allow_html=True)
-            st.sidebar.image(image, use_container_width=True)
-
+            image = Image.open("Nomenclature_DDF919.png")
+        
+            # Styled caption
+            st.markdown("""
+            <div style='font-size:18px; color:black; font-weight:bold;'>
+                Nomenclature DDF
+            </div>
+            """, unsafe_allow_html=True)
+        
+            # Justified description with line break
+            st.markdown("""
+            <div style='text-align: justify; font-size:16px; color:black; font-weight:500;'>
+                This diagram presents the upstream workflow of the DDF co-cultivation project, detailing sequential stages from cell thawing to the N-1 phase.<br>
+                It includes standardised nomenclature and hierarchical relationships.
+            </div>
+            """, unsafe_allow_html=True)
+        
+            # Image display
+            st.image(image, use_container_width=True)
 
         # Display Canva link
         st.sidebar.markdown(
@@ -429,6 +440,7 @@ elif project == "HKR357":
     st.write("Running code for project HKR357...")
     # Add code for HKR357 here
     st.success("Code for HKR357 executed successfully.")
+
 
 
 
